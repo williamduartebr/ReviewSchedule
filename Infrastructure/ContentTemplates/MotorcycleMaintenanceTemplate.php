@@ -83,7 +83,7 @@ class MotorcycleMaintenanceTemplate
         "A tradição de excelência da {make} na {model} {year} se preserva através de manutenção que honra a engenharia e qualidade desta marca reconhecida."
     ];
 
-    // Estilos de manutenção para motocicletas
+    // Estilos de manutenção para motocicletas - EXPANDIDO
     private array $maintenanceStyles = [
         'tecnico_moto' => [
             'oil_change' => 'Substituição do óleo lubrificante e elemento filtrante conforme especificação técnica',
@@ -91,7 +91,33 @@ class MotorcycleMaintenanceTemplate
             'brake_inspection' => 'Inspeção do sistema de frenagem e verificação de desgaste das pastilhas',
             'valve_clearance' => 'Verificação e ajuste das folgas das válvulas conforme especificação',
             'suspension_check' => 'Inspeção dos componentes da suspensão dianteira e traseira',
-            'electrical_diag' => 'Diagnóstico eletrônico dos sistemas de ignição e carga'
+            'electrical_diag' => 'Diagnóstico eletrônico dos sistemas de ignição e carga',
+            // ADICIONADO: Serviços faltantes
+            'initial_revision' => 'Primeira revisão com verificação de assentamento dos componentes',
+            'cables_adjustment' => 'Ajuste de cabos e comandos conforme especificação',
+            'fluid_levels' => 'Verificação de níveis de fluidos operacionais',
+            'cable_lubrication' => 'Lubrificação de cabos e articulações de controle',
+            'electrical_check' => 'Verificação básica do sistema elétrico',
+            'spark_plugs_check' => 'Verificação do estado das velas de ignição',
+            'air_filter' => 'Substituição do filtro de ar do motor',
+            'clutch_check' => 'Inspeção do sistema de embreagem',
+            'electrical_full' => 'Diagnóstico completo do sistema elétrico',
+            'injection_clean' => 'Limpeza do sistema de injeção eletrônica',
+            'fuel_system' => 'Verificação do sistema de alimentação de combustível',
+            'wheel_bearings' => 'Verificação dos rolamentos das rodas',
+            'steering_check' => 'Inspeção do sistema de direção',
+            'brake_fluid_change' => 'Troca do fluido de freio',
+            'cooling_system' => 'Verificação do sistema de arrefecimento',
+            'complete_revision' => 'Revisão completa de todos os sistemas',
+            'spark_plugs_change' => 'Substituição das velas de ignição',
+            'timing_check' => 'Verificação da sincronização do motor',
+            'hoses_inspection' => 'Inspeção de mangueiras e tubulações',
+            'brake_system_full' => 'Verificação completa do sistema de freios',
+            'battery_check' => 'Verificação da bateria e sistema de carga',
+            'transmission_check' => 'Verificação do sistema de transmissão',
+            'exhaust_system' => 'Inspeção do sistema de escapamento',
+            'suspension_full' => 'Inspeção completa da suspensão',
+            'bearing_lubrication' => 'Lubrificação de rolamentos e articulações'
         ],
         'simples_moto' => [
             'oil_change' => 'Troca de óleo e filtro',
@@ -99,7 +125,33 @@ class MotorcycleMaintenanceTemplate
             'brake_inspection' => 'Verificação dos freios',
             'valve_clearance' => 'Folgas das válvulas',
             'suspension_check' => 'Suspensão',
-            'electrical_diag' => 'Sistema elétrico'
+            'electrical_diag' => 'Sistema elétrico',
+            // ADICIONADO: Serviços faltantes versão simples
+            'initial_revision' => 'Primeira revisão',
+            'cables_adjustment' => 'Ajuste de cabos',
+            'fluid_levels' => 'Níveis de fluidos',
+            'cable_lubrication' => 'Lubrificação cabos',
+            'electrical_check' => 'Elétrica básica',
+            'spark_plugs_check' => 'Velas',
+            'air_filter' => 'Filtro de ar',
+            'clutch_check' => 'Embreagem',
+            'electrical_full' => 'Sistema elétrico completo',
+            'injection_clean' => 'Injeção',
+            'fuel_system' => 'Sistema combustível',
+            'wheel_bearings' => 'Rolamentos rodas',
+            'steering_check' => 'Direção',
+            'brake_fluid_change' => 'Fluido freio',
+            'cooling_system' => 'Arrefecimento',
+            'complete_revision' => 'Revisão completa',
+            'spark_plugs_change' => 'Troca velas',
+            'timing_check' => 'Sincronização',
+            'hoses_inspection' => 'Mangueiras',
+            'brake_system_full' => 'Freios completo',
+            'battery_check' => 'Bateria',
+            'transmission_check' => 'Transmissão',
+            'exhaust_system' => 'Escapamento',
+            'suspension_full' => 'Suspensão completa',
+            'bearing_lubrication' => 'Lubrificação geral'
         ],
         'detalhado_moto' => [
             'oil_change' => 'Drenagem completa e reposição do óleo lubrificante com filtro original homologado',
@@ -107,7 +159,33 @@ class MotorcycleMaintenanceTemplate
             'brake_inspection' => 'Verificação completa do sistema de freios incluindo pastilhas, discos e fluido',
             'valve_clearance' => 'Medição e ajuste preciso das folgas das válvulas conforme tolerâncias de fábrica',
             'suspension_check' => 'Análise completa dos componentes de suspensão e ajustes de regulagem',
-            'electrical_diag' => 'Diagnóstico eletrônico avançado dos sistemas de ignição, carga e injeção'
+            'electrical_diag' => 'Diagnóstico eletrônico avançado dos sistemas de ignição, carga e injeção',
+            // ADICIONADO: Versão detalhada dos serviços faltantes
+            'initial_revision' => 'Primeira revisão detalhada com verificação minuciosa do assentamento de componentes',
+            'cables_adjustment' => 'Ajuste preciso de cabos e comandos com lubrificação das articulações',
+            'fluid_levels' => 'Verificação criteriosa de níveis e qualidade de todos os fluidos',
+            'cable_lubrication' => 'Lubrificação completa de cabos e articulações com produtos específicos',
+            'electrical_check' => 'Verificação detalhada do sistema elétrico de baixa tensão',
+            'spark_plugs_check' => 'Inspeção minuciosa das velas incluindo eletrodo e isolador',
+            'air_filter' => 'Substituição do filtro de ar com limpeza do alojamento',
+            'clutch_check' => 'Inspeção completa do sistema de embreagem e ajuste',
+            'electrical_full' => 'Diagnóstico eletrônico completo de todos os sistemas',
+            'injection_clean' => 'Limpeza especializada do sistema de injeção eletrônica',
+            'fuel_system' => 'Verificação completa do sistema de alimentação e filtros',
+            'wheel_bearings' => 'Inspeção detalhada dos rolamentos com verificação de folgas',
+            'steering_check' => 'Inspeção completa do sistema de direção e alinhamento',
+            'brake_fluid_change' => 'Troca completa do fluido de freio com sangria do sistema',
+            'cooling_system' => 'Verificação completa do sistema de arrefecimento e termostato',
+            'complete_revision' => 'Revisão ampla e detalhada de todos os sistemas da motocicleta',
+            'spark_plugs_change' => 'Substituição das velas com verificação do sistema de ignição',
+            'timing_check' => 'Verificação precisa da sincronização e ponto de ignição',
+            'hoses_inspection' => 'Inspeção detalhada de mangueiras, abraçadeiras e conexões',
+            'brake_system_full' => 'Verificação completa incluindo discos, pastilhas e sistema hidráulico',
+            'battery_check' => 'Teste completo da bateria, alternador e sistema de carga',
+            'transmission_check' => 'Verificação completa da transmissão e embreagem',
+            'exhaust_system' => 'Inspeção completa do sistema de escapamento e fixações',
+            'suspension_full' => 'Inspeção completa da suspensão com ajustes de regulagem',
+            'bearing_lubrication' => 'Lubrificação completa de todos os rolamentos e articulações'
         ],
         'performance_moto' => [
             'oil_change' => 'Substituição com óleo de alta performance e filtro premium para máximo rendimento',
@@ -115,7 +193,33 @@ class MotorcycleMaintenanceTemplate
             'brake_inspection' => 'Verificação especializada do sistema de freios para pilotagem esportiva',
             'valve_clearance' => 'Ajuste de precisão das válvulas para otimização da performance do motor',
             'suspension_check' => 'Configuração especializada da suspensão para características de pilotagem',
-            'electrical_diag' => 'Diagnóstico avançado e otimização dos sistemas eletrônicos de performance'
+            'electrical_diag' => 'Diagnóstico avançado e otimização dos sistemas eletrônicos de performance',
+            // ADICIONADO: Versão performance dos serviços faltantes
+            'initial_revision' => 'Primeira revisão especializada com foco em performance e rodagem',
+            'cables_adjustment' => 'Ajuste de precisão dos cabos para resposta otimizada',
+            'fluid_levels' => 'Verificação com fluidos de alta performance',
+            'cable_lubrication' => 'Lubrificação com produtos premium para performance',
+            'electrical_check' => 'Verificação do sistema elétrico com foco em performance',
+            'spark_plugs_check' => 'Verificação de velas de alta performance',
+            'air_filter' => 'Filtro de ar de alta fluxo para performance',
+            'clutch_check' => 'Inspeção da embreagem para pilotagem esportiva',
+            'electrical_full' => 'Diagnóstico eletrônico avançado para otimização',
+            'injection_clean' => 'Limpeza especializada para máxima eficiência',
+            'fuel_system' => 'Otimização do sistema de combustível',
+            'wheel_bearings' => 'Rolamentos de precisão para performance',
+            'steering_check' => 'Configuração da direção para pilotagem esportiva',
+            'brake_fluid_change' => 'Fluido de freio de alta performance',
+            'cooling_system' => 'Otimização do sistema de arrefecimento',
+            'complete_revision' => 'Revisão completa com foco em performance máxima',
+            'spark_plugs_change' => 'Velas de alta performance para máximo rendimento',
+            'timing_check' => 'Sincronização otimizada para performance',
+            'hoses_inspection' => 'Mangueiras de alta temperatura para performance',
+            'brake_system_full' => 'Sistema de freios de alta performance',
+            'battery_check' => 'Sistema de carga otimizado',
+            'transmission_check' => 'Transmissão configurada para performance',
+            'exhaust_system' => 'Sistema de escape para máxima performance',
+            'suspension_full' => 'Suspensão configurada para pilotagem esportiva',
+            'bearing_lubrication' => 'Lubrificação premium para alta performance'
         ]
     ];
 
@@ -201,6 +305,17 @@ class MotorcycleMaintenanceTemplate
         ]
     ];
 
+    /**
+     * Método para limpar estado entre gerações
+     */
+    public static function clearState(): void
+    {
+        self::$usedIntros = [];
+        self::$usedConclusions = [];
+        self::$usedMaintenanceStyles = [];
+        self::$usedFAQStyles = [];
+    }
+
     public function generateIntroduction(array $vehicleData): string
     {
         $vehicleKey = $this->getVehicleKey($vehicleData);
@@ -227,28 +342,67 @@ class MotorcycleMaintenanceTemplate
     {
         $style = $this->selectMaintenanceStyle($vehicleData);
         $schedule = [];
-        $revisionNumber = 1;
 
-        foreach ($this->maintenanceSchedule as $interval => $serviceKeys) {
-            preg_match('/(\d+\.?\d*)\s*km/', $interval, $matches);
-            $km = $matches[1] ?? '0';
+        // GARANTIR EXATAMENTE 6 REVISÕES - INTERVALOS ESPECÍFICOS PARA MOTO
+        $revisionData = [
+            1 => ['interval' => '1.000 km ou 6 meses', 'km' => '1.000'],
+            2 => ['interval' => '5.000 km ou 12 meses', 'km' => '5.000'],
+            3 => ['interval' => '10.000 km ou 18 meses', 'km' => '10.000'],
+            4 => ['interval' => '15.000 km ou 24 meses', 'km' => '15.000'],
+            5 => ['interval' => '20.000 km ou 30 meses', 'km' => '20.000'],
+            6 => ['interval' => '25.000 km ou 36 meses', 'km' => '25.000']
+        ];
 
+        for ($revisionNumber = 1; $revisionNumber <= 6; $revisionNumber++) {
+            $serviceKeys = $this->getServicesForRevision($revisionNumber, $vehicleData);
             $services = $this->translateServices($serviceKeys, $style);
 
             $schedule[] = [
                 'numero_revisao' => $revisionNumber,
-                'intervalo' => $interval,
-                'km' => $km,
+                'intervalo' => $revisionData[$revisionNumber]['interval'],
+                'km' => $revisionData[$revisionNumber]['km'],
                 'servicos_principais' => array_slice($services, 0, 4),
                 'verificacoes_complementares' => array_slice($services, 4),
                 'estimativa_custo' => $this->getCostRange($vehicleData, $revisionNumber),
                 'observacoes' => $this->getVariedObservation($revisionNumber, $vehicleData)
             ];
-
-            $revisionNumber++;
         }
 
         return $schedule;
+    }
+
+    private function getServicesForRevision(int $revision, array $vehicleData): array
+    {
+        $intervalKeys = array_keys($this->maintenanceSchedule ?? []);
+
+        if (isset($intervalKeys[$revision - 1])) {
+            $key = $intervalKeys[$revision - 1];
+            if (isset($this->maintenanceSchedule[$key])) {
+                return $this->maintenanceSchedule[$key];
+            }
+        }
+
+        return $this->getDefaultServicesForRevision($revision, $vehicleData);
+    }
+
+    private function getDefaultServicesForRevision(int $revision, array $vehicleData): array
+    {
+        switch ($revision) {
+            case 1:
+                return ['initial_revision', 'oil_change', 'chain_maintenance', 'valve_clearance'];
+            case 2:
+                return ['oil_change', 'brake_inspection', 'chain_maintenance', 'electrical_check'];
+            case 3:
+                return ['oil_change', 'air_filter', 'valve_clearance', 'clutch_check'];
+            case 4:
+                return ['oil_change', 'spark_plugs_check', 'brake_fluid_change', 'wheel_bearings'];
+            case 5:
+                return ['complete_revision', 'spark_plugs_change', 'timing_check', 'brake_system_full'];
+            case 6:
+                return ['oil_change', 'transmission_check', 'suspension_full', 'bearing_lubrification'];
+            default:
+                return ['oil_change', 'brake_inspection'];
+        }
     }
 
     public function generatePreventiveMaintenance(array $vehicleData): array
@@ -258,19 +412,25 @@ class MotorcycleMaintenanceTemplate
         $variations = [
             'simples' => [
                 'verificacoes_mensais' => [
-                    'Verificar nível do óleo do motor',
-                    'Conferir calibragem dos pneus',
-                    'Testar funcionamento das luzes',
-                    'Verificar tensão da corrente'
+                    'Verificar óleo',
+                    'Calibrar pneus',
+                    'Testar luzes',
+                    'Lubrificar corrente'
                 ],
                 'verificacoes_trimestrais' => [
                     'Fluido de freio',
-                    'Lubrificação da corrente',
-                    'Estado da bateria',
+                    'Corrente',
+                    'Bateria',
                     'Desgaste dos pneus'
+                ],
+                'verificacoes_anuais' => [
+                    'Regulagem da suspensão',
+                    'Sistema de escapamento',
+                    'Cabos e comandos',
+                    'Lubrificação geral'
                 ]
             ],
-            'detalhada' => [
+            'detalhado' => [
                 'verificacoes_mensais' => [
                     'Monitoramento do nível e viscosidade do óleo lubrificante',
                     'Verificação da pressão dos pneumáticos conforme especificação',
@@ -282,21 +442,19 @@ class MotorcycleMaintenanceTemplate
                     'Manutenção completa da corrente incluindo limpeza e lubrificação',
                     'Verificação da bateria, terminais e sistema de carga',
                     'Inspeção detalhada do desgaste e alinhamento dos pneus'
+                ],
+                'verificacoes_anuais' => [
+                    'Regulagem da suspensão conforme peso e uso',
+                    'Inspeção completa do sistema de escapamento',
+                    'Verificação do estado dos cabos e comandos',
+                    'Lubrificação de articulações e pivôs',
+                    'Verificação do alinhamento da direção'
                 ]
             ]
         ];
 
-        $selectedStyle = in_array($style, ['tecnico_moto', 'detalhado_moto', 'performance_moto']) ? 'detalhada' : 'simples';
-
-        return array_merge($variations[$selectedStyle], [
-            'verificacoes_anuais' => [
-                'Regulagem da suspensão conforme peso e uso',
-                'Inspeção completa do sistema de escapamento',
-                'Verificação do estado dos cabos e comandos',
-                'Lubrificação de articulações e pivôs',
-                'Verificação do alinhamento da direção'
-            ]
-        ]);
+        $selectedStyle = in_array($style, ['tecnico_moto', 'detalhado_moto', 'performance_moto']) ? 'detalhado' : 'simples';
+        return $variations[$selectedStyle];
     }
 
     public function generateCriticalParts(array $vehicleData): array
@@ -439,6 +597,11 @@ class MotorcycleMaintenanceTemplate
             $availableStyles = array_keys($this->maintenanceStyles);
         }
 
+        // CORREÇÃO: Verificação adicional para garantir que availableStyles não está vazio
+        if (empty($availableStyles)) {
+            $availableStyles = ['tecnico_moto']; // Fallback seguro
+        }
+
         // Preferência por segmento
         $preferredStyles = [
             'premium' => ['performance_moto', 'detalhado_moto'],
@@ -451,7 +614,12 @@ class MotorcycleMaintenanceTemplate
         $preferred = $preferredStyles[$segment] ?? ['tecnico_moto'];
         $intersection = array_intersect($preferred, $availableStyles);
 
-        $selectedStyle = empty($intersection) ? $availableStyles[0] : $intersection[array_rand($intersection)];
+        // CORREÇÃO: Validação mais robusta para evitar array vazio
+        if (empty($intersection)) {
+            $selectedStyle = $availableStyles[0];
+        } else {
+            $selectedStyle = $intersection[array_rand($intersection)];
+        }
 
         // Marcar como usado
         if (!isset(self::$usedMaintenanceStyles[$vehicleKey])) {
@@ -464,6 +632,7 @@ class MotorcycleMaintenanceTemplate
 
     private function translateServices(array $serviceKeys, string $style): array
     {
+        // CORREÇÃO: Garantir que o estilo existe
         $styleData = $this->maintenanceStyles[$style] ?? $this->maintenanceStyles['tecnico_moto'];
         $services = [];
 
@@ -508,6 +677,7 @@ class MotorcycleMaintenanceTemplate
             'cables_adjustment' => 'Ajuste de cabos e comandos'
         ];
 
+        // CORREÇÃO: Fallback final para evitar erros
         return $fallbacks[$serviceKey] ?? 'Serviço especializado para motocicletas';
     }
 

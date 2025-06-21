@@ -153,7 +153,6 @@ class CarMaintenanceTemplate
             'filters_change' => 'Troca filtros',
             'transmission_fluids' => 'Fluidos transmissão',
             'emission_control' => 'Controle emissões'
-
         ]
     ];
 
@@ -272,32 +271,77 @@ class CarMaintenanceTemplate
         ];
     }
 
+    // ============================================================================
+    // CORREÇÃO: generateDetailedSchedule() - GARANTIR EXATAMENTE 6 REVISÕES
+    // ============================================================================
     public function generateDetailedSchedule(array $vehicleData): array
     {
         $style = $this->selectMaintenanceStyle($vehicleData);
         $schedule = [];
-        $revisionNumber = 1;
-
-        foreach ($this->maintenanceSchedule as $interval => $serviceKeys) {
-            preg_match('/(\d+\.?\d*)\s*km/', $interval, $matches);
-            $km = $matches[1] ?? '0';
-
+        
+        // GARANTIR EXATAMENTE 6 REVISÕES - INTERVALOS FIXOS
+        $revisionData = [
+            1 => ['interval' => '10.000 km ou 12 meses', 'km' => '10.000'],
+            2 => ['interval' => '20.000 km ou 24 meses', 'km' => '20.000'], 
+            3 => ['interval' => '30.000 km ou 36 meses', 'km' => '30.000'],
+            4 => ['interval' => '40.000 km ou 48 meses', 'km' => '40.000'],
+            5 => ['interval' => '50.000 km ou 60 meses', 'km' => '50.000'],
+            6 => ['interval' => '60.000 km ou 72 meses', 'km' => '60.000']
+        ];
+        
+        for ($revisionNumber = 1; $revisionNumber <= 6; $revisionNumber++) {
+            // Buscar serviços específicos ou usar padrão
+            $serviceKeys = $this->getServicesForRevision($revisionNumber, $vehicleData);
             $services = $this->translateServices($serviceKeys, $style);
             
             $schedule[] = [
                 'numero_revisao' => $revisionNumber,
-                'intervalo' => $interval,
-                'km' => $km,
+                'intervalo' => $revisionData[$revisionNumber]['interval'],
+                'km' => $revisionData[$revisionNumber]['km'],
                 'servicos_principais' => array_slice($services, 0, 4),
                 'verificacoes_complementares' => array_slice($services, 4),
                 'estimativa_custo' => $this->getCostRange($vehicleData, $revisionNumber),
                 'observacoes' => $this->getVariedObservation($revisionNumber, $vehicleData)
             ];
-
-            $revisionNumber++;
         }
-
+        
         return $schedule;
+    }
+
+    // ============================================================================
+    // NOVO: Método auxiliar para buscar serviços por revisão
+    // ============================================================================
+    private function getServicesForRevision(int $revision, array $vehicleData): array
+    {
+        // Tentar buscar do maintenanceSchedule existente primeiro
+        $intervalKeys = array_keys($this->maintenanceSchedule ?? []);
+        
+        if (isset($intervalKeys[$revision - 1])) {
+            $key = $intervalKeys[$revision - 1];
+            if (isset($this->maintenanceSchedule[$key])) {
+                return $this->maintenanceSchedule[$key];
+            }
+        }
+        
+        // Fallback: serviços padrão baseados no número da revisão
+        return $this->getDefaultServicesForRevision($revision, $vehicleData);
+    }
+
+    // ============================================================================
+    // NOVO: Método auxiliar para serviços padrão
+    // ============================================================================
+    private function getDefaultServicesForRevision(int $revision, array $vehicleData): array
+    {
+        // Serviços padrão para carros convencionais
+        switch ($revision) {
+            case 1: return ['oil_change', 'brake_check', 'fluid_check', 'cooling_check', 'air_filter', 'electrical'];
+            case 2: return ['oil_change', 'air_filter', 'spark_plugs', 'steering_check', 'suspension_check', 'ac_filter'];
+            case 3: return ['oil_change', 'injection_clean', 'clutch_check', 'electrical_full', 'exhaust_check', 'hoses_check'];
+            case 4: return ['oil_change', 'fuel_filter', 'brake_fluid_change', 'belts_check', 'transmission_oil', 'battery_check'];
+            case 5: return ['oil_change', 'cooling_system_full', 'power_steering_check', 'cv_joints_check', 'brake_system_full', 'engine_mounts'];
+            case 6: return ['full_revision', 'oil_change', 'spark_plugs_change', 'belts_change', 'timing_belt_check', 'filters_change'];
+            default: return ['oil_change', 'brake_check', 'fluid_check'];
+        }
     }
 
     public function generatePreventiveMaintenance(array $vehicleData): array
@@ -347,6 +391,7 @@ class CarMaintenanceTemplate
             ]
         ]);
     }
+    
 
     public function generateCriticalParts(array $vehicleData): array
     {
@@ -490,7 +535,7 @@ class CarMaintenanceTemplate
         // Preferência por segmento
         $preferredStyles = [
             'premium' => ['tecnico', 'detalhado'],
-            'popular' => ['simples', 'pratico'], // Agora 'pratico' existe!
+            'popular' => ['simples', 'pratico'],
             'utilitario' => ['detalhado', 'tecnico']
         ];
         

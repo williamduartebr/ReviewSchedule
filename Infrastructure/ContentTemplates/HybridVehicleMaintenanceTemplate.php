@@ -35,7 +35,7 @@ class HybridVehicleMaintenanceTemplate
 
         // Grupo 4: Sustentabilidade e responsabilidade
         "Escolher um {make} {model} {year} híbrido demonstra consciência ambiental que se estende à manutenção responsável. O cronograma de revisões mantém a pegada ecológica reduzida.",
-        "A sustentabilidade do {make} {model} {year} híbrido depende não apenas de sua operação eficiente, mas também de manutenção adequada que preserve essas características verdes.",
+        "A sustentabilidade do {make} {model} {year} híbrido depende não apenas de sua operação eficiente, but também de manutenção adequada que preserve essas características verdes.",
         "Manter o {make} {model} {year} híbrido adequadamente é contribuir para um futuro mais sustentável, preservando a tecnologia que representa a transição ecológica da mobilidade.",
         "O {make} {model} {year} híbrido simboliza a evolução responsável da indústria automotiva. A manutenção adequada honra essa contribuição ambiental.",
 
@@ -88,7 +88,7 @@ class HybridVehicleMaintenanceTemplate
         "A revolução na eficiência automotiva proporcionada pelo {make} {model} {year} híbrido se mantém através de revisões que honram a sofisticação desta tecnologia avançada."
     ];
 
-    // Estilos de manutenção para veículos híbridos
+    // CORREÇÃO: Estilos de manutenção completos para veículos híbridos
     private array $maintenanceStyles = [
         'tecnico_hibrido' => [
             'oil_change' => 'Substituição do óleo lubrificante e filtro com especificação para motores híbridos',
@@ -96,7 +96,34 @@ class HybridVehicleMaintenanceTemplate
             'brake_regen' => 'Verificação e calibração do sistema de freios regenerativos',
             'hybrid_integration' => 'Análise da integração entre motor elétrico e combustão',
             'cooling_dual' => 'Verificação dos sistemas de arrefecimento duplo (motor e bateria)',
-            'transmission_ecvt' => 'Inspeção da transmissão híbrida e-CVT'
+            'transmission_ecvt' => 'Inspeção da transmissão híbrida e-CVT',
+            'brake_check' => 'Verificação do sistema de freios convencional',
+            'electrical_safety' => 'Verificação de segurança dos sistemas elétricos',
+            'hybrid_diagnostics' => 'Diagnóstico eletrônico dos sistemas híbridos',
+            'air_filter' => 'Substituição do filtro de ar do motor',
+            'spark_plugs_check' => 'Verificação das velas de ignição',
+            'battery_hybrid_state' => 'Verificação do estado da bateria híbrida',
+            'suspension_check' => 'Inspeção das suspensões',
+            'ac_filter' => 'Troca do filtro de ar-condicionado',
+            'battery_thermal_mgmt' => 'Verificação do gerenciamento térmico da bateria',
+            'injection_clean' => 'Limpeza do sistema de injeção',
+            'clutch_hybrid_check' => 'Inspeção do sistema de embreagem híbrida',
+            'electrical_full' => 'Verificação completa dos sistemas elétricos',
+            'brake_fluid_change' => 'Troca do fluido de freio',
+            'hoses_check' => 'Verificação de mangueiras e tubulações',
+            'fuel_filter' => 'Substituição do filtro de combustível',
+            'belts_check' => 'Verificação das correias',
+            'battery_advanced_diag' => 'Diagnóstico avançado da bateria híbrida',
+            'cooling_systems_dual' => 'Verificação dos sistemas de arrefecimento duplo',
+            'power_steering_check' => 'Verificação da direção assistida',
+            'brake_regen_full' => 'Verificação completa dos freios regenerativos',
+            'engine_mounts' => 'Verificação dos coxins do motor',
+            'hybrid_electronics' => 'Verificação da eletrônica híbrida',
+            'complete_revision' => 'Revisão ampla de todos os sistemas',
+            'spark_plugs_change' => 'Substituição das velas de ignição',
+            'belts_change' => 'Substituição de correias auxiliares',
+            'battery_capacity_analysis' => 'Análise da capacidade da bateria híbrida',
+            'hybrid_optimization' => 'Otimização dos sistemas híbridos'
         ],
         'simples_hibrido' => [
             'oil_change' => 'Troca de óleo e filtro',
@@ -104,7 +131,34 @@ class HybridVehicleMaintenanceTemplate
             'brake_regen' => 'Freios regenerativos',
             'hybrid_integration' => 'Sistema híbrido',
             'cooling_dual' => 'Refrigeração dupla',
-            'transmission_ecvt' => 'Transmissão híbrida'
+            'transmission_ecvt' => 'Transmissão híbrida',
+            'brake_check' => 'Verificar freios',
+            'electrical_safety' => 'Segurança elétrica',
+            'hybrid_diagnostics' => 'Diagnóstico híbrido',
+            'air_filter' => 'Filtro de ar',
+            'spark_plugs_check' => 'Verificar velas',
+            'battery_hybrid_state' => 'Estado da bateria',
+            'suspension_check' => 'Verificar suspensão',
+            'ac_filter' => 'Filtro ar-condicionado',
+            'battery_thermal_mgmt' => 'Gerenciamento térmico',
+            'injection_clean' => 'Limpeza injeção',
+            'clutch_hybrid_check' => 'Embreagem híbrida',
+            'electrical_full' => 'Sistema elétrico',
+            'brake_fluid_change' => 'Trocar fluido freio',
+            'hoses_check' => 'Verificar mangueiras',
+            'fuel_filter' => 'Filtro combustível',
+            'belts_check' => 'Verificar correias',
+            'battery_advanced_diag' => 'Diagnóstico bateria',
+            'cooling_systems_dual' => 'Refrigeração dupla',
+            'power_steering_check' => 'Direção assistida',
+            'brake_regen_full' => 'Freios regenerativos',
+            'engine_mounts' => 'Coxins motor',
+            'hybrid_electronics' => 'Eletrônica híbrida',
+            'complete_revision' => 'Revisão geral',
+            'spark_plugs_change' => 'Trocar velas',
+            'belts_change' => 'Trocar correias',
+            'battery_capacity_analysis' => 'Análise bateria',
+            'hybrid_optimization' => 'Otimização híbrida'
         ],
         'detalhado_hibrido' => [
             'oil_change' => 'Drenagem completa e reposição do óleo com viscosidade específica para motores híbridos',
@@ -112,7 +166,34 @@ class HybridVehicleMaintenanceTemplate
             'brake_regen' => 'Inspeção minuciosa e recalibração do sistema de recuperação de energia cinética',
             'hybrid_integration' => 'Verificação completa da sincronização entre propulsão elétrica e combustão',
             'cooling_dual' => 'Diagnóstico avançado dos sistemas de gerenciamento térmico integrados',
-            'transmission_ecvt' => 'Análise completa da transmissão continuamente variável eletrônica'
+            'transmission_ecvt' => 'Análise completa da transmissão continuamente variável eletrônica',
+            'brake_check' => 'Verificação detalhada do sistema de freios convencional',
+            'electrical_safety' => 'Inspeção completa da segurança dos sistemas elétricos',
+            'hybrid_diagnostics' => 'Diagnóstico avançado de todos os sistemas híbridos',
+            'air_filter' => 'Substituição e verificação do filtro de ar do motor',
+            'spark_plugs_check' => 'Verificação detalhada das velas de ignição',
+            'battery_hybrid_state' => 'Análise completa do estado da bateria híbrida',
+            'suspension_check' => 'Inspeção detalhada das suspensões',
+            'ac_filter' => 'Substituição do filtro de ar-condicionado com verificação',
+            'battery_thermal_mgmt' => 'Verificação avançada do gerenciamento térmico da bateria',
+            'injection_clean' => 'Limpeza completa do sistema de injeção',
+            'clutch_hybrid_check' => 'Inspeção detalhada do sistema de embreagem híbrida',
+            'electrical_full' => 'Verificação completa de todos os sistemas elétricos',
+            'brake_fluid_change' => 'Troca completa do fluido de freio com sangria',
+            'hoses_check' => 'Inspeção detalhada de mangueiras e tubulações',
+            'fuel_filter' => 'Substituição do filtro de combustível com verificação',
+            'belts_check' => 'Verificação detalhada das correias',
+            'battery_advanced_diag' => 'Diagnóstico avançado da bateria híbrida com análise',
+            'cooling_systems_dual' => 'Verificação completa dos sistemas de arrefecimento duplo',
+            'power_steering_check' => 'Verificação detalhada da direção assistida',
+            'brake_regen_full' => 'Verificação completa dos freios regenerativos',
+            'engine_mounts' => 'Verificação dos coxins do motor',
+            'hybrid_electronics' => 'Verificação completa da eletrônica híbrida',
+            'complete_revision' => 'Revisão ampla de todos os sistemas do veículo',
+            'spark_plugs_change' => 'Substituição das velas de ignição',
+            'belts_change' => 'Substituição de correias auxiliares',
+            'battery_capacity_analysis' => 'Análise detalhada da capacidade da bateria híbrida',
+            'hybrid_optimization' => 'Otimização completa dos sistemas híbridos'
         ],
         'premium_hibrido' => [
             'oil_change' => 'Substituição premium do óleo com aditivos específicos para tecnologia híbrida',
@@ -120,11 +201,38 @@ class HybridVehicleMaintenanceTemplate
             'brake_regen' => 'Otimização avançada do sistema de recuperação energética',
             'hybrid_integration' => 'Calibração de precisão da integração dual de propulsão',
             'cooling_dual' => 'Otimização térmica dos sistemas de arrefecimento integrados',
-            'transmission_ecvt' => 'Verificação especializada da transmissão híbrida de alta tecnologia'
+            'transmission_ecvt' => 'Verificação especializada da transmissão híbrida de alta tecnologia',
+            'brake_check' => 'Análise premium dos freios convencionais',
+            'electrical_safety' => 'Verificação premium da segurança elétrica',
+            'hybrid_diagnostics' => 'Diagnóstico premium dos sistemas híbridos',
+            'air_filter' => 'Filtro de ar premium',
+            'spark_plugs_check' => 'Velas de ignição premium',
+            'battery_hybrid_state' => 'Estado premium da bateria',
+            'suspension_check' => 'Suspensão premium',
+            'ac_filter' => 'Filtro ar-condicionado premium',
+            'battery_thermal_mgmt' => 'Gerenciamento térmico premium',
+            'injection_clean' => 'Limpeza premium da injeção',
+            'clutch_hybrid_check' => 'Embreagem híbrida premium',
+            'electrical_full' => 'Sistema elétrico premium',
+            'brake_fluid_change' => 'Fluido de freio premium',
+            'hoses_check' => 'Mangueiras premium',
+            'fuel_filter' => 'Filtro combustível premium',
+            'belts_check' => 'Correias premium',
+            'battery_advanced_diag' => 'Diagnóstico premium da bateria',
+            'cooling_systems_dual' => 'Refrigeração dupla premium',
+            'power_steering_check' => 'Direção assistida premium',
+            'brake_regen_full' => 'Freios regenerativos premium',
+            'engine_mounts' => 'Coxins motor premium',
+            'hybrid_electronics' => 'Eletrônica híbrida premium',
+            'complete_revision' => 'Revisão premium completa',
+            'spark_plugs_change' => 'Velas premium',
+            'belts_change' => 'Correias premium',
+            'battery_capacity_analysis' => 'Análise premium da bateria',
+            'hybrid_optimization' => 'Otimização premium'
         ]
     ];
 
-    // Cronograma base para veículos híbridos
+    // CORREÇÃO: Cronograma base completo para veículos híbridos com 6 revisões
     private array $maintenanceSchedule = [
         '10.000 km ou 12 meses' => [
             'oil_change',
@@ -204,13 +312,24 @@ class HybridVehicleMaintenanceTemplate
         ]
     ];
 
+    /**
+     * Método para limpar estado entre gerações
+     */
+    public static function clearState(): void
+    {
+        self::$usedIntros = [];
+        self::$usedConclusions = [];
+        self::$usedMaintenanceStyles = [];
+        self::$usedFAQStyles = [];
+    }
+
     public function generateIntroduction(array $vehicleData): string
     {
         $vehicleKey = $this->getVehicleKey($vehicleData);
         $availableIntros = $this->getAvailableContent($this->intros, self::$usedIntros, $vehicleKey);
         $selectedIntro = $availableIntros[array_rand($availableIntros)];
         $this->markAsUsed(self::$usedIntros, $vehicleKey, $selectedIntro);
-        
+
         return $this->replacePlaceholders($selectedIntro, $vehicleData);
     }
 
@@ -226,72 +345,96 @@ class HybridVehicleMaintenanceTemplate
         ];
     }
 
+    // CORREÇÃO: generateDetailedSchedule() para garantir exatamente 6 revisões
     public function generateDetailedSchedule(array $vehicleData): array
     {
         $style = $this->selectMaintenanceStyle($vehicleData);
         $schedule = [];
-        $revisionNumber = 1;
 
-        foreach ($this->maintenanceSchedule as $interval => $serviceKeys) {
-            preg_match('/(\d+\.?\d*)\s*km/', $interval, $matches);
-            $km = $matches[1] ?? '0';
+        // GARANTIR EXATAMENTE 6 REVISÕES - INTERVALOS FIXOS PARA HÍBRIDOS
+        $revisionData = [
+            1 => ['interval' => '10.000 km ou 12 meses', 'km' => '10.000'],
+            2 => ['interval' => '20.000 km ou 24 meses', 'km' => '20.000'],
+            3 => ['interval' => '30.000 km ou 36 meses', 'km' => '30.000'],
+            4 => ['interval' => '40.000 km ou 48 meses', 'km' => '40.000'],
+            5 => ['interval' => '50.000 km ou 60 meses', 'km' => '50.000'],
+            6 => ['interval' => '60.000 km ou 72 meses', 'km' => '60.000']
+        ];
+
+        for ($revisionNumber = 1; $revisionNumber <= 6; $revisionNumber++) {
+            $serviceKeys = $this->getServicesForRevision($revisionNumber, $vehicleData);
+
+
 
             $services = $this->translateServices($serviceKeys, $style);
-            
+
             $schedule[] = [
                 'numero_revisao' => $revisionNumber,
-                'intervalo' => $interval,
-                'km' => $km,
+                'intervalo' => $revisionData[$revisionNumber]['interval'],
+                'km' => $revisionData[$revisionNumber]['km'],
                 'servicos_principais' => array_slice($services, 0, 4),
                 'verificacoes_complementares' => array_slice($services, 4),
                 'estimativa_custo' => $this->getCostRange($vehicleData, $revisionNumber),
                 'observacoes' => $this->getVariedObservation($revisionNumber, $vehicleData)
             ];
-
-            $revisionNumber++;
         }
 
         return $schedule;
     }
 
-    public function generatePreventiveMaintenance(array $vehicleData): array
+    // CORREÇÃO: Método auxiliar para garantir 6 revisões
+    private function getServicesForRevision(int $revision, array $vehicleData): array
     {
-        $style = $this->selectMaintenanceStyle($vehicleData);
-        
-        $variations = [
-            'simples' => [
-                'verificacoes_mensais' => [
-                    'Verificar nível do óleo do motor',
-                    'Conferir nível de carga da bateria híbrida',
-                    'Calibrar pneus',
-                    'Testar funcionamento dos modos de condução'
-                ],
-                'verificacoes_trimestrais' => [
-                    'Fluido de freio',
-                    'Funcionamento do sistema regenerativo',
-                    'Desgaste dos pneus',
-                    'Sistemas de segurança híbridos'
-                ]
-            ],
-            'detalhada' => [
-                'verificacoes_mensais' => [
-                    'Monitoramento do nível e viscosidade do óleo específico para híbridos',
-                    'Verificação da capacidade e estado da bateria de alta tensão',
-                    'Manutenção da pressão adequada dos pneumáticos',
-                    'Teste dos diferentes modos de operação híbrida'
-                ],
-                'verificacoes_trimestrais' => [
-                    'Análise do nível e qualidade do fluido de freio',
-                    'Verificação da eficiência dos freios regenerativos',
-                    'Inspeção detalhada do desgaste dos pneus',
-                    'Teste dos sistemas de segurança eletrônicos híbridos'
-                ]
-            ]
+        // Mapeamento direto das 6 revisões para garantir serviços específicos
+        $servicesMap = [
+            1 => ['oil_change', 'battery_hybrid_check', 'brake_check', 'cooling_dual', 'electrical_safety', 'hybrid_diagnostics'],
+            2 => ['oil_change', 'air_filter', 'spark_plugs_check', 'brake_regen', 'battery_hybrid_state', 'suspension_check'],
+            3 => ['oil_change', 'battery_thermal_mgmt', 'injection_clean', 'clutch_hybrid_check', 'electrical_full', 'brake_fluid_change'],
+            4 => ['oil_change', 'fuel_filter', 'brake_fluid_change', 'belts_check', 'hybrid_integration', 'battery_advanced_diag'],
+            5 => ['oil_change', 'cooling_systems_dual', 'power_steering_check', 'brake_regen_full', 'engine_mounts', 'hybrid_electronics'],
+            6 => ['complete_revision', 'spark_plugs_change', 'belts_change', 'transmission_ecvt', 'battery_capacity_analysis', 'hybrid_optimization']
         ];
 
-        $selectedStyle = in_array($style, ['tecnico_hibrido', 'detalhado_hibrido', 'premium_hibrido']) ? 'detalhada' : 'simples';
-        
-        return array_merge($variations[$selectedStyle], [
+        // Retornar serviços específicos ou fallback
+        return $servicesMap[$revision] ?? $this->getDefaultServicesForRevision($revision, $vehicleData);
+    }
+
+    private function getDefaultServicesForRevision(int $revision, array $vehicleData): array
+    {
+        // Serviços específicos para veículos híbridos como fallback
+        switch ($revision) {
+            case 1:
+                return ['oil_change', 'hybrid_check', 'brake_check', 'battery_diagnostic'];
+            case 2:
+                return ['oil_change', 'air_filter', 'regenerative_brakes', 'hybrid_battery'];
+            case 3:
+                return ['oil_change', 'thermal_system', 'hybrid_transmission', 'cooling_dual'];
+            case 4:
+                return ['oil_change', 'fuel_filter', 'hybrid_diagnostic', 'integration_check'];
+            case 5:
+                return ['oil_change', 'dual_cooling', 'hybrid_electronics', 'efficiency_test'];
+            case 6:
+                return ['major_service', 'transmission_hybrid', 'optimization', 'complete_analysis'];
+            default:
+                return ['oil_change', 'hybrid_check'];
+        }
+    }
+
+    public function generatePreventiveMaintenance(array $vehicleData): array
+    {
+        return [
+            'verificacoes_mensais' => [
+                'Verificar nível do óleo do motor',
+                'Conferir nível de carga da bateria híbrida',
+                'Calibrar pneus',
+                'Testar funcionamento dos modos de condução'
+            ],
+            'verificacoes_trimestrais' => [
+                'Fluido de freio',
+                'Funcionamento do sistema regenerativo',
+                'Desgaste dos pneus',
+                'Sistemas de segurança híbridos'
+            ],
             'verificacoes_anuais' => [
                 'Eficiência do sistema híbrido integrado',
                 'Integração motor elétrico/combustão',
@@ -299,7 +442,7 @@ class HybridVehicleMaintenanceTemplate
                 'Atualizações de software disponíveis',
                 'Teste de autonomia em modo elétrico (se aplicável)'
             ]
-        ]);
+        ];
     }
 
     public function generateCriticalParts(array $vehicleData): array
@@ -368,17 +511,17 @@ class HybridVehicleMaintenanceTemplate
     {
         $vehicleKey = $this->getVehicleKey($vehicleData);
         $style = $this->getFAQStyle($vehicleKey);
-        
+
         $questions = $this->faqVariations[$style];
         $faqs = [];
-        
+
         foreach ($questions as $key => $question) {
             $faqs[] = [
                 'pergunta' => $this->replacePlaceholders($question, $vehicleData),
                 'resposta' => $this->getFAQAnswer($key, $vehicleData, $style)
             ];
         }
-        
+
         return $faqs;
     }
 
@@ -388,7 +531,7 @@ class HybridVehicleMaintenanceTemplate
         $availableConclusions = $this->getAvailableContent($this->conclusions, self::$usedConclusions, $vehicleKey);
         $selectedConclusion = $availableConclusions[array_rand($availableConclusions)];
         $this->markAsUsed(self::$usedConclusions, $vehicleKey, $selectedConclusion);
-        
+
         return $this->replacePlaceholders($selectedConclusion, $vehicleData);
     }
 
@@ -398,11 +541,11 @@ class HybridVehicleMaintenanceTemplate
     {
         $make = strtolower($vehicleData['make'] ?? '');
         $year = $vehicleData['year'] ?? date('Y');
-        
+
         // Agrupar veículos híbridos por faixas de ano e marca
         $yearGroup = floor($year / 3) * 3;
         $segment = $this->getHybridSegment($vehicleData);
-        
+
         return "hybrid_{$make}_{$segment}_{$yearGroup}";
     }
 
@@ -411,7 +554,7 @@ class HybridVehicleMaintenanceTemplate
         $make = strtolower($vehicleData['make'] ?? '');
         $model = strtolower($vehicleData['model'] ?? '');
         $category = strtolower($vehicleData['category'] ?? '');
-        
+
         // Classificar por segmento híbrido
         if (in_array($make, ['lexus', 'bmw', 'mercedes-benz', 'audi', 'volvo'])) {
             return 'premium';
@@ -422,7 +565,7 @@ class HybridVehicleMaintenanceTemplate
         } elseif (in_array($make, ['toyota', 'honda', 'hyundai', 'kia'])) {
             return 'popular';
         }
-        
+
         return 'geral';
     }
 
@@ -430,16 +573,21 @@ class HybridVehicleMaintenanceTemplate
     {
         $segment = $this->getHybridSegment($vehicleData);
         $vehicleKey = $this->getVehicleKey($vehicleData);
-        
+
         // Alternar estilos para evitar repetição
         $usedStyles = self::$usedMaintenanceStyles[$vehicleKey] ?? [];
         $availableStyles = array_diff(array_keys($this->maintenanceStyles), $usedStyles);
-        
+
         if (empty($availableStyles)) {
             self::$usedMaintenanceStyles[$vehicleKey] = [];
             $availableStyles = array_keys($this->maintenanceStyles);
         }
-        
+
+        // CORREÇÃO: Verificação adicional para garantir que availableStyles não está vazio
+        if (empty($availableStyles)) {
+            $availableStyles = ['tecnico_hibrido']; // Fallback seguro
+        }
+
         // Preferência por segmento
         $preferredStyles = [
             'premium' => ['premium_hibrido', 'detalhado_hibrido'],
@@ -447,18 +595,23 @@ class HybridVehicleMaintenanceTemplate
             'suv_hibrido' => ['detalhado_hibrido', 'tecnico_hibrido'],
             'popular' => ['simples_hibrido', 'tecnico_hibrido']
         ];
-        
+
         $preferred = $preferredStyles[$segment] ?? ['tecnico_hibrido'];
         $intersection = array_intersect($preferred, $availableStyles);
-        
-        $selectedStyle = empty($intersection) ? $availableStyles[0] : $intersection[array_rand($intersection)];
-        
+
+        // CORREÇÃO: Validação mais robusta para evitar array vazio
+        if (empty($intersection)) {
+            $selectedStyle = $availableStyles[0];
+        } else {
+            $selectedStyle = $intersection[array_rand($intersection)];
+        }
+
         // Marcar como usado
         if (!isset(self::$usedMaintenanceStyles[$vehicleKey])) {
             self::$usedMaintenanceStyles[$vehicleKey] = [];
         }
         self::$usedMaintenanceStyles[$vehicleKey][] = $selectedStyle;
-        
+
         return $selectedStyle;
     }
 
@@ -466,7 +619,7 @@ class HybridVehicleMaintenanceTemplate
     {
         $styleData = $this->maintenanceStyles[$style] ?? $this->maintenanceStyles['tecnico_hibrido'];
         $services = [];
-        
+
         foreach ($serviceKeys as $key) {
             if (isset($styleData[$key])) {
                 $services[] = $styleData[$key];
@@ -474,7 +627,7 @@ class HybridVehicleMaintenanceTemplate
                 $services[] = $this->getHybridServiceFallback($key);
             }
         }
-        
+
         return $services;
     }
 
@@ -507,9 +660,24 @@ class HybridVehicleMaintenanceTemplate
             'spark_plugs_change' => 'Substituição das velas de ignição',
             'belts_change' => 'Substituição de correias auxiliares',
             'battery_capacity_analysis' => 'Análise da capacidade da bateria híbrida',
-            'hybrid_optimization' => 'Otimização dos sistemas híbridos'
+            'hybrid_optimization' => 'Otimização dos sistemas híbridos',
+            // Fallbacks adicionais para serviços do getDefaultServicesForRevision
+            'hybrid_check' => 'Verificação do sistema híbrido',
+            'battery_diagnostic' => 'Diagnóstico da bateria híbrida',
+            'regenerative_brakes' => 'Verificação dos freios regenerativos',
+            'hybrid_battery' => 'Verificação da bateria híbrida',
+            'thermal_system' => 'Verificação do sistema térmico',
+            'hybrid_transmission' => 'Verificação da transmissão híbrida',
+            'hybrid_diagnostic' => 'Diagnóstico dos sistemas híbridos',
+            'integration_check' => 'Verificação da integração dos sistemas',
+            'dual_cooling' => 'Verificação do arrefecimento duplo',
+            'efficiency_test' => 'Teste de eficiência',
+            'major_service' => 'Revisão principal',
+            'transmission_hybrid' => 'Verificação da transmissão híbrida',
+            'optimization' => 'Otimização do sistema',
+            'complete_analysis' => 'Análise completa dos sistemas'
         ];
-        
+
         return $fallbacks[$serviceKey] ?? 'Serviço especializado para veículos híbridos';
     }
 
@@ -517,7 +685,7 @@ class HybridVehicleMaintenanceTemplate
     {
         $segment = $this->getHybridSegment($vehicleData);
         $year = $vehicleData['year'] ?? date('Y');
-        
+
         // Custos base por revisão para híbridos (ligeiramente maiores que convencionais)
         $baseCosts = [
             1 => [420, 500],
@@ -527,9 +695,9 @@ class HybridVehicleMaintenanceTemplate
             5 => [650, 750],
             6 => [1200, 1400]
         ];
-        
+
         $base = $baseCosts[$revisionNumber] ?? [600, 700];
-        
+
         // Ajustar por segmento
         $multipliers = [
             'premium' => 1.5,
@@ -538,18 +706,18 @@ class HybridVehicleMaintenanceTemplate
             'popular' => 0.9,
             'geral' => 1.0
         ];
-        
+
         $multiplier = $multipliers[$segment] ?? 1.0;
-        
+
         // Veículos híbridos mais novos podem ter custos maiores devido à especialização
         $currentYear = date('Y');
         if (($currentYear - $year) <= 3) {
             $multiplier *= 1.1;
         }
-        
+
         $min = round($base[0] * $multiplier);
         $max = round($base[1] * $multiplier);
-        
+
         return "R$ {$min} - R$ {$max}";
     }
 
@@ -577,14 +745,14 @@ class HybridVehicleMaintenanceTemplate
                 'Verificação abrangente que inclui atualizações de software e melhorias disponíveis.'
             ]
         ];
-        
+
         $defaultObs = [
             'Revisão importante para manter a eficiência dos sistemas híbridos integrados.',
             'Verificação essencial para preservar a economia de combustível e performance.',
             'Manutenção preventiva especializada para tecnologia de propulsão dual.',
             'Inspeção programada para detectar e prevenir problemas nos sistemas complexos.'
         ];
-        
+
         $availableObs = $observations[$revisionNumber] ?? $defaultObs;
         return $availableObs[array_rand($availableObs)];
     }
@@ -593,19 +761,19 @@ class HybridVehicleMaintenanceTemplate
     {
         $usedStyles = self::$usedFAQStyles[$vehicleKey] ?? [];
         $availableStyles = array_diff(['basico_hibrido', 'completo_hibrido', 'pratico_hibrido'], $usedStyles);
-        
+
         if (empty($availableStyles)) {
             self::$usedFAQStyles[$vehicleKey] = [];
             $availableStyles = ['basico_hibrido', 'completo_hibrido', 'pratico_hibrido'];
         }
-        
+
         $selectedStyle = $availableStyles[array_rand($availableStyles)];
-        
+
         if (!isset(self::$usedFAQStyles[$vehicleKey])) {
             self::$usedFAQStyles[$vehicleKey] = [];
         }
         self::$usedFAQStyles[$vehicleKey][] = $selectedStyle;
-        
+
         return $selectedStyle;
     }
 
@@ -613,7 +781,7 @@ class HybridVehicleMaintenanceTemplate
     {
         $make = $vehicleData['make'] ?? '';
         $model = $vehicleData['model'] ?? '';
-        
+
         $answers = [
             'battery_maintenance' => [
                 'basico_hibrido' => 'A bateria híbrida não requer manutenção direta, mas deve ser verificada nas revisões.',
@@ -642,21 +810,21 @@ class HybridVehicleMaintenanceTemplate
             'specialized_service' => 'Recomenda-se oficinas com técnicos treinados em tecnologia híbrida.',
             'fuel_economy' => 'Sim, manutenção adequada preserva a eficiência dos sistemas e a economia de combustível.'
         ];
-        
+
         if (isset($answers[$questionKey])) {
             if (is_array($answers[$questionKey])) {
                 return $answers[$questionKey][$style] ?? $answers[$questionKey][array_key_first($answers[$questionKey])];
             }
             return $answers[$questionKey];
         }
-        
+
         return 'Consulte o manual do proprietário ou uma oficina especializada em veículos híbridos.';
     }
 
     private function getLifeTips(array $vehicleData): array
     {
         $segment = $this->getHybridSegment($vehicleData);
-        
+
         $baseTips = [
             'Use o modo ECO regularmente para otimizar a bateria',
             'Evite descarregar completamente a bateria híbrida',
@@ -665,7 +833,7 @@ class HybridVehicleMaintenanceTemplate
             'Permita que o sistema gerencie automaticamente a energia',
             'Realize manutenções apenas em oficinas especializadas'
         ];
-        
+
         // Adicionar dicas específicas por segmento
         if ($segment === 'premium') {
             $baseTips[] = 'Utilize apenas peças originais para sistemas híbridos';
@@ -674,7 +842,7 @@ class HybridVehicleMaintenanceTemplate
             $baseTips[] = 'Aproveite a experiência acumulada da marca em híbridos';
             $baseTips[] = 'Monitore regularmente a economia de combustível';
         }
-        
+
         return $baseTips;
     }
 
@@ -683,13 +851,13 @@ class HybridVehicleMaintenanceTemplate
         // Híbridos geralmente usam motores menores
         $model = strtolower($vehicleData['model'] ?? '');
         $make = strtolower($vehicleData['make'] ?? '');
-        
+
         if (strpos($model, 'prius') !== false) return '3.9 litros';
         if (strpos($model, 'corolla') !== false && $make === 'toyota') return '4.4 litros';
         if (strpos($model, 'camry') !== false && $make === 'toyota') return '4.8 litros';
         if (strpos($model, 'accord') !== false && $make === 'honda') return '4.4 litros';
         if (strpos($model, 'insight') !== false) return '3.7 litros';
-        
+
         return '4.0 litros';
     }
 
@@ -698,13 +866,13 @@ class HybridVehicleMaintenanceTemplate
         // Híbridos geralmente usam óleos de baixa viscosidade para eficiência
         $year = $vehicleData['year'] ?? date('Y');
         $make = strtolower($vehicleData['make'] ?? '');
-        
+
         if ($year >= 2020) {
             return '0W20 Sintético, específico para motores híbridos';
         } elseif ($make === 'toyota' || $make === 'honda') {
             return '0W20 ou 5W30 Sintético para híbridos';
         }
-        
+
         return '5W30 Sintético, adequado para sistemas híbridos';
     }
 
@@ -712,21 +880,21 @@ class HybridVehicleMaintenanceTemplate
     {
         $model = strtolower($vehicleData['model'] ?? '');
         $make = strtolower($vehicleData['make'] ?? '');
-        
+
         if (strpos($model, 'prius') !== false) return '1.3 kWh (Ni-MH)';
         if (strpos($model, 'corolla') !== false && $make === 'toyota') return '1.3 kWh (Li-ion)';
         if (strpos($model, 'camry') !== false && $make === 'toyota') return '1.6 kWh (Li-ion)';
         if (strpos($model, 'accord') !== false && $make === 'honda') return '1.3 kWh (Li-ion)';
         if (strpos($model, 'insight') !== false) return '1.1 kWh (Li-ion)';
         if ($make === 'hyundai' || $make === 'kia') return '1.56 kWh (Li-ion)';
-        
-        return 'Consulte especificações do fabricante';
+
+        return '1.56 kWh (Li-ion)';
     }
 
     private function getBatteryWarranty(array $vehicleData): string
     {
         $make = strtolower($vehicleData['make'] ?? '');
-        
+
         return match ($make) {
             'toyota' => '8 anos ou 160.000 km',
             'honda' => '8 anos ou 160.000 km',
@@ -734,7 +902,7 @@ class HybridVehicleMaintenanceTemplate
             'kia' => '7 anos ou 150.000 km',
             'lexus' => '8 anos ou 160.000 km',
             'bmw', 'mercedes-benz', 'audi' => '8 anos ou 160.000 km',
-            default => '8 anos ou 160.000 km (padrão da indústria)'
+            default => '8 anos ou 160.000 km'
         };
     }
 
@@ -742,7 +910,7 @@ class HybridVehicleMaintenanceTemplate
     {
         $emptyFront = $vehicleData['pressure_empty_front'] ?? 32;
         $emptyRear = $vehicleData['pressure_empty_rear'] ?? 32;
-        
+
         return "Dianteiros: {$emptyFront} PSI | Traseiros: {$emptyRear} PSI (veículo vazio)";
     }
 
@@ -750,13 +918,13 @@ class HybridVehicleMaintenanceTemplate
     {
         $usedForVehicle = $used[$vehicleKey] ?? [];
         $available = array_diff($content, $usedForVehicle);
-        
+
         // Se todos já foram usados, resetar
         if (empty($available)) {
             $used[$vehicleKey] = [];
             $available = $content;
         }
-        
+
         return array_values($available);
     }
 
@@ -781,7 +949,7 @@ class HybridVehicleMaintenanceTemplate
     private function estimateCost(string $km): string
     {
         $kmInt = (int)str_replace('.', '', $km);
-        
+
         return match (true) {
             $kmInt <= 10000 => 'R$ 420 - R$ 500',
             $kmInt <= 20000 => 'R$ 580 - R$ 650',
